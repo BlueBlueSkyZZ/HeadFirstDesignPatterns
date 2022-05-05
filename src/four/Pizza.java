@@ -1,13 +1,34 @@
 package four;
 
+import java.util.ArrayList;
+
 public abstract class Pizza {
 
-    public abstract void prepare();
+    String name;
+    String dough;
+    String sauce;
+    ArrayList toppings = new ArrayList();
 
-    public abstract void bake();
+    public void prepare() {
+        System.out.println("Preparing " + name);
+        System.out.println("Tossing dough");
+        System.out.println("Adding sauce");
+        System.out.println("Adding toppings:");
+        for (int i = 0; i < toppings.size(); i++) {
+            System.out.println(" " + toppings.get(i));
+        }
+    }
 
-    public abstract void cut();
+    public void bake() {
+        System.out.println("Bake for 25 minutes");
+    }
 
-    public abstract void box();
+    public void cut() {
+        System.out.println("cut");
+    }
+
+    public void box() {
+        System.out.println("box");
+    }
 
 }
